@@ -1,3 +1,6 @@
+import math
+from statistics import mean
+
 def bmi(weight, height):  # Функция для подсчета индекса массы тела с входными параметрами {вес} и {рост}
     bmi = weight / (height ** 2)
     if bmi <= 18.5:
@@ -34,7 +37,12 @@ def square_sum(numbers):  # Вычисление суммы квадратов �
     return summ
 
 
+def better_than_average(class_points, your_points):
+    return True if your_points > mean(class_points) else False
+
+
 print(bmi(50, 1.80))
 print(abbrev_name('Sam Harris'))
 print(simple_multiplication(2))
 print(square_sum([0, 3, 4, 5]))
+print(better_than_average([2, 3], 5))
