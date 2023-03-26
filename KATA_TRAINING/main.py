@@ -41,6 +41,38 @@ def better_than_average(class_points, your_points):
     return True if your_points > mean(class_points) else False
 
 
+def simple_multiplication(number):
+    return number * 8 if number % 2 == 0 else number * 9
+
+
+def paperwork(n, m):
+    return n * m if n >= 0 and m >= 0 else 0
+
+
+def string_to_array(s): # разбивание строки на отдельные слова
+    return s.split(" ")
+
+
+def reverse_seq(n): # возвращает массив интов от n до 1
+    lst = []
+    for i in range(n, 0, -1):
+        lst.append(i)
+    return lst
+    # return list(range(n, 0, -1))
+
+
+def even_or_odd(number):
+    return "Even" if number % 2 == 0 else "Odd"
+
+
+def sum_array(a):
+    return sum(a) if len(a) > 0 else 0
+
+
+def find_smallest_int(arr):
+    return min(arr)
+
+
 print(bmi(50, 1.80))
 print(abbrev_name('Sam Harris'))
 print(simple_multiplication(2))
